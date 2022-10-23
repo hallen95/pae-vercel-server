@@ -28,3 +28,5 @@ app.get('/', (req, res) => {
 app.listen(4000, () => {
     console.log(`Server Started at ${4000}`)
 })
+
+module.exports = app;
