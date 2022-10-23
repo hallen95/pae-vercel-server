@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
+const cors = require('cors');
 const mongoString = 'mongodb+srv://hallen95:PJzhWJTmH1bX7VWL@cluster0.qcfyunr.mongodb.net/test';
 
 mongoose.connect(mongoString);
@@ -16,6 +17,8 @@ database.once('connected', () => {
     console.log('Database Connected');
 })
 const app = express();
+
+app.use(cors())
 
 app.use(express.json());
 // 
