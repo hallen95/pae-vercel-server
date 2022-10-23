@@ -22,7 +22,7 @@ app.use(express.json());
 app.use('/api', routes)
 
 app.get('/', (req, res) => {
-    res.send('hello world')
+    res.send('hello world 2')
 })
 
 app.listen(4000, () => {
